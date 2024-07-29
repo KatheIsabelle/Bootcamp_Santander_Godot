@@ -10,14 +10,6 @@ In the second function of this script, the logic for character movement is creat
 
 
 ## PARTE 2: FISICA + FUNCIONALIDADES
-    No script game_manager.gd filtra-se um evento do mouse especifico para ser
-    o clique do botão esquerdo, utilizando condicionais para tal. A função spawn_object é
-    invocada para realizar a lógica dentro dela. Dentro da spawn object utiliza-se a posição 
-    do mouse onde o clique está acontecendo para realizar a cópia do objeto prefab (em formato de
-    cena para que possa ser invocado várias vezes) usando object_template.instantiate, essa 
-    cena é colocada em um array que possui um index de acordo com o tamanho do vetor e utiliza-se
-    randi_range(0,object_templates.size()-1) para tornar o processo dinamico de acordo com o tamanho
-    do vetor. Add_child cria o objeto dentro da cena de acordo com a posição do clique. 
+In the `game_manager.gd` script, a specific mouse event is filtered to detect left-button clicks using conditionals. The `spawn_object` function is invoked to execute the logic within it. Within `spawn_object`, the mouse position where the click occurs is used to create a copy of the prefab object (formatted as a scene so it can be instantiated multiple times) using `object_template.instantiate`. This scene is placed in an array with an index based on the vector's size, and `randi_range(0, object_templates.size() - 1)` is used to make the process dynamic according to the vector's size. `add_child` creates the object within the scene at the click position.
 
-    OBS: Utilizou-se para cada objeto um physics material diferente, este altera a propriedade fisica 
-    do objeto fazendo-o quicar, mudando o atrito, etc. 
+Note: Each object uses a different physics material, which alters the object's physical properties, making it bounce, changing its friction, etc.
