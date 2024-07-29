@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddjdaq4pxtrwp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w586p"]
+friction = 0.58
+bounce = 0.57
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnpml"]
+size = Vector2(77.7861, 79.3929)
+
+[node name="Caixa_RigidBody2D" type="RigidBody2D"]
+position = Vector2(431, 204)
+mass = 4.0
+physics_material_override = SubResource("PhysicsMaterial_w586p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.00006, -6.99998)
+rotation = 0.414144
+shape = SubResource("RectangleShape2D_mnpml")
+
+[node name="Rock_Color" type="ColorRect" parent="CollisionShape2D"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+color = Color(0.827953, 0.443343, 0.669427, 1)
+metadata/_edit_use_anchors_ = true

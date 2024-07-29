@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccfdeea5m32eg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0ffye"]
+friction = 0.79
+bounce = 0.08
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_osqqp"]
+size = Vector2(90.5, 87)
+
+[node name="RegularBox2" type="RigidBody2D"]
+position = Vector2(557, 53)
+mass = 30.0
+physics_material_override = SubResource("PhysicsMaterial_0ffye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(42.75, 37.5)
+shape = SubResource("RectangleShape2D_osqqp")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+offset_left = -41.0
+offset_top = -40.0
+offset_right = 42.0
+offset_bottom = 38.0
+color = Color(0.762146, 0.849406, 0.138668, 1)
